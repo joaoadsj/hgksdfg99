@@ -1,4 +1,3 @@
-# hgksdfg99
 var tela=1
 var xin2=[]
 var yin2=[]
@@ -18,26 +17,8 @@ var yd
 var bpontos=9
 var estadoDisparo = false;
 var raioD=3
-if(tela==1){
-  function setup() {
-  createCanvas(600, 500)}
-  function draw() {
-  background(150)
-   textSize(39);
-text('Bem vindo ao jogo,jogador!',50,50);
-  textSize(13)
-  text('No nivel 1 o objetivo do jogo é eliminar todos os alvos antes que eles cheguem do outro lado da tela. ',10,100);
-  text('No nivel 2 o objetivo é apenas chegar ao outro lado.',10,170)
-  text('Aperte ENTER para ir ao inicio do jogo.',10,260)
-  if ( keyIsDown(ENTER) ){
-    tela===2
-  }
-}
-}
-
-if(tela==2){
 function setup() {
-  createCanvas(400, 400);}
+  createCanvas(600, 500);
   for(i=0;i<=qtdObjetos;i++){
   vxi[i]=random(250,400)
   vyi[i]=random(50,400) 
@@ -46,7 +27,22 @@ function setup() {
      xin2[i]=random(50,300)
   yin2[i]=random(50,400)}
 }
-function draw() {
+  function draw() {
+ if(tela == 1){
+    background(150)
+   textSize(39);
+text('Bem vindo ao jogo,jogador!',50,50);
+  textSize(13)
+  text('No nivel 1 o objetivo do jogo é eliminar todos os alvos antes que eles cheguem do outro lado da tela. ',10,100);
+  text('No nivel 2 o objetivo é apenas chegar ao outro lado.',10,170)
+  text('Aperte ENTER para ir ao inicio do jogo.',10,260)
+  if ( keyIsDown(ENTER) ){
+    tela=2;
+  }
+}
+
+
+if(tela==2){
   background(100);
    textSize(19);
   text('vidas: '+vidas,10,30);
@@ -330,4 +326,4 @@ if( estadoDisparo ) {
   }
  }
 }
-}
+  }
